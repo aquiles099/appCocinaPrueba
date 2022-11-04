@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceProductService } from '../../../core/service-product/servicio-prueba.service';
+import { ServiceProductService } from '../../../core/service-product/service-product.service';
 
 @Component({
     selector: 'app-products',
     templateUrl: './products.component.html',
     styleUrls: ['./products.component.scss']
 })
+/**
+ * Componente del listado de producto y las categorias
+ */
+
 export class ProductsComponent implements OnInit {
     public dataProductos :any;
     public loading: Boolean;

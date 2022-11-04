@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ServiceProductService } from '../../../core/service-product/servicio-prueba.service';
+import { ServiceProductService } from '../../../core/service-product/service-product.service';
 
 @Component({
   selector: 'app-contact',

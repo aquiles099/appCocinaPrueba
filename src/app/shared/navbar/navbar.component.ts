@@ -6,6 +6,9 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss']
 })
+/**
+ * Componente del navbar
+ */
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
