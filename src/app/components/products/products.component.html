@@ -1,0 +1,39 @@
+<div class="section section-navbars">
+    <div class="container" style="padding-top: 3rem" >
+        <div>
+            <img src="assets/img/light-marca.png" class="img-section" alt="" >
+            </div>
+        <h3 class="title-section">Nuestros artículos</h3>         
+        <div class="row" style="padding-top: 5rem; padding-bottom: 5rem;">
+            <div class="col-md-3">                
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action" [ngClass]="activeMenu === 'Todos'? 'active':'' " (click)="getAllProductos()">
+                      TODOS
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action" [ngClass]="activeMenu === 'Productos'? 'active':'' " (click)="getProductCategories('Productos')">PRODUCTOS</button>
+                    <button type="button" class="list-group-item list-group-item-action" [ngClass]="activeMenu === 'Recetas'? 'active':'' "  (click)="getProductCategories('Recetas')">RECETAS</button>
+                    <button type="button" class="list-group-item list-group-item-action" [ngClass]="activeMenu === 'Consejos'? 'active':'' " (click)="getProductCategories('Consejos')">CONSEJOS</button>                    
+                  </div>
+            </div>
+            <div class="col-md-9" *ngIf="loading">
+                <div class="card-skeleton" *ngFor="let ske of skeleton ">
+                    <div class="profile-img-section"></div>       
+                    <div class="text1"> </div>
+                    <div class="text2"></div>                              
+                </div>
+            </div>
+            <div class="col-md-9" *ngIf="dataProductos != undefined && !loading">               
+                <div class="card" *ngFor="let producto of dataProductos">
+                    <img class="card-img-top" src="{{producto.image}}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text-title">{{producto.title}}</p>
+                      <p class="card-text">{{producto.content}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
